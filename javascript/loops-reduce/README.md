@@ -1,6 +1,6 @@
-#Loops Reduce
+# Loops Reduce
 
-#Dont's pay the for-loop tax
+#Dont pay the for-loop tax
 Link: https://dev.to/danhomola/dont-pay-the-for-looptax
 
 Open 'index.html' with your browser and look inside your 'console' and in 'script.js file
