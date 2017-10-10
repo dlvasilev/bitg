@@ -19,7 +19,6 @@ for (var i = 0; i < colors.length; i++) {
 console.log('\'forEach\' loop => ')
 colors.forEach(function (color) {
     console.log(color);
-
 });
 
 console.log('\'forEach\' with \'arrow\' function => ')
