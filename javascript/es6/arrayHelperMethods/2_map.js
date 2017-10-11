@@ -18,7 +18,7 @@ for (var i = 0; i < numbers.length; i++) {
 }
 console.log(doubledNumbers);
 
-console.log('\'map\' loop => ')
+console.log('\'map\' helper => ')
 var doubled = numbers.map(function (number) {
     return number * 2;
 });

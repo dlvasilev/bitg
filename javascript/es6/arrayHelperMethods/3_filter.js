@@ -25,7 +25,7 @@ for (var i = 0; i < products.length; i++) {
 }
 console.log(filteredProducts);
 
-console.log('\'filter\' loop => ')
+console.log('\'filter\' helper => ')
 filteredProducts = products.filter(function (product) {
     return product.type === 'vegetable';
 });
@@ -34,7 +34,7 @@ console.log(filteredProducts);
 /**
  * Section 2
  */
-console.log('\'filter\' loop => More then one condition ')
+console.log('\'filter\' helper => More then one condition ')
 var filteredProductsTwo = products.filter(function (product) {
     return product.type === 'vegetable' && product.quantity > 0 && product.price < 10;
 });
@@ -44,7 +44,7 @@ console.log(filteredProductsTwo);
 /**
  * Section 3
  */
-console.log('\'filter\' loop => More complex situation, using inside a function')
+console.log('\'filter\' helper => More complex situation, using inside a function')
 var post = {id: 4, title: 'New Post'};
 var comments = [
     { postId: 4, content: 'awesome post'},
