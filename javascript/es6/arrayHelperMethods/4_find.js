@@ -65,3 +65,65 @@ function postForComment(posts, comment) {
 }
 console.log(postForComment(posts, comment));
 
+/**
+ * Exercises
+ */
+
+/**
+ * 1. Finding Admin Users
+ * 
+ * Find the user in the users's array who is an admin.  Assign this user to the variable 'admin'.
+ */
+var users = [
+    { id: 1, admin: false },
+    { id: 2, admin: false },
+    { id: 3, admin: true }
+];
+var admin;
+
+admin = users.find(function (user) {
+    return user.admin;
+});
+
+/**
+ * 2. What's Your Balance?
+ * 
+ * Find the account with a balance of 12 and assign it to the variable 'account'.
+ */
+var accounts = [
+    { balance: -10 },
+    { balance: 12 },
+    { balance: 0 }
+];
+var account;
+
+account = accounts.find(function (account) {
+    return account.balance === 12;
+});
+
+/**
+ * 3. Custom findWhere Helper
+ * 
+ * The given object should be used as the search criteria';
+ * findWhere function that achieves this shorthand approach.
+ */
+var ladders = [
+    { id: 1, height: 20 },
+    { id: 3, height: 25 }
+];
+
+function findWhere(array, criteria) {
+    return array.find(function (element) {
+        var exists = true;
+        for (var prop in criteria) {
+            if (!element[prop] || element[prop] != criteria[prop]) {
+                exist = false;
+                break;
+            }
+        }
+
+        return exists;
+    });
+}
+console.log(findWhere(ladders, { height: 20 }))
+

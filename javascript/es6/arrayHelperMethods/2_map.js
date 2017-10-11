@@ -39,3 +39,52 @@ var prices = cars.map(function (car) {
 });
 
 console.log(prices);
+
+/**
+ * Exercises
+ */
+
+/**
+ * 1. Plucking Values
+ * 
+ * Using map, create a new array that contains the 'height' property of each object.  Assign this new array to the variable 'heights'.
+ */
+var images = [
+    { height: '34px', width: '39px' },
+    { height: '54px', width: '19px' },
+    { height: '83px', width: '75px' },
+];
+
+var heights = images.map(function (image) {
+    return image.height;
+});
+
+/**
+ * 2. Calculating Values with Map
+ * 
+ *  Using map, create a new array that contains the distance / time value from each trip.  In other words, the new array should contain the (distance / time) value. 
+ */
+var trips = [
+    { distance: 34, time: 10 },
+    { distance: 90, time: 50 },
+    { distance: 59, time: 25 }
+];
+
+var speeds = trips.map(function (trip) {
+    return trip.distance / trip.time;
+});
+
+/**
+ * 3. Implementing 'Pluck'
+ * 
+ * Implement a 'pluck' function.  Pluck should accept an array and a string representing a property name and return an  array containing that property from each object. 
+ */
+var paints = [{ color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
+
+function pluck(array, property) {
+    return array.map(function (element) {
+        return element[property];
+    });
+}
+
+pluck(paints, 'color'); // returns ['red', 'yellow', 'blue'];
