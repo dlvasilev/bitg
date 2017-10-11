@@ -49,6 +49,7 @@ var specificCar;
 specificCar = cars.find(function (car) {
     return car.model === 'Focus';
 });
+console.log('sepcificCar: ');
 console.log(specificCar);
 
 // Example Two
@@ -63,6 +64,7 @@ function postForComment(posts, comment) {
         return post.id === comment.postId;
     });
 }
+console.log('postForcomment: ');
 console.log(postForComment(posts, comment));
 
 /**
@@ -84,6 +86,8 @@ var admin;
 admin = users.find(function (user) {
     return user.admin;
 });
+console.log('Admin: ');
+console.log(admin);
 
 /**
  * 2. What's Your Balance?
@@ -100,6 +104,8 @@ var account;
 account = accounts.find(function (account) {
     return account.balance === 12;
 });
+console.log('Account: ');
+console.log(account);
 
 /**
  * 3. Custom findWhere Helper
@@ -125,5 +131,6 @@ function findWhere(array, criteria) {
         return exists;
     });
 }
+console.log('findLadders: ');
 console.log(findWhere(ladders, { height: 20 }))
 

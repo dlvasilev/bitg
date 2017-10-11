@@ -58,6 +58,8 @@ var images = [
 var heights = images.map(function (image) {
     return image.height;
 });
+console.log('Image heights: ');
+console.log(heights);
 
 /**
  * 2. Calculating Values with Map
@@ -73,6 +75,9 @@ var trips = [
 var speeds = trips.map(function (trip) {
     return trip.distance / trip.time;
 });
+console.log('DistanceAgainstTimeOfTrips (speeds): ');
+console.log(speeds);
+
 
 /**
  * 3. Implementing 'Pluck'
@@ -80,6 +85,7 @@ var speeds = trips.map(function (trip) {
  * Implement a 'pluck' function.  Pluck should accept an array and a string representing a property name and return an  array containing that property from each object. 
  */
 var paints = [{ color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
+var paintWithColor;
 
 function pluck(array, property) {
     return array.map(function (element) {
@@ -87,4 +93,6 @@ function pluck(array, property) {
     });
 }
 
-pluck(paints, 'color'); // returns ['red', 'yellow', 'blue'];
+paintWithColor = pluck(paints, 'color');
+console.log('PaintWithColor: ');
+console.log(paintWithColor);

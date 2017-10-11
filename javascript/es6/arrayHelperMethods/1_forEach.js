@@ -42,7 +42,7 @@ numbers.forEach(function (number) {
     sumOne += number;
 });
 // Print the sum variable
-console.log(sumOne);
+console.log('SumWithAnonymousFunc: ' + sumOne);
 
 // Second Road
 
@@ -56,7 +56,7 @@ function adder(number) {
 numbers.forEach(adder);
 
 // Print the sum variable
-console.log(sumTwo);
+console.log('SumWithDeclaredFunc: ' + sumTwo);
 
 
 /**
@@ -77,6 +77,7 @@ function handlePosts() {
         { id: 105, title: 'The Brightest Ruby' }
     ];
 
+    console.log('Begin Saving Posts');
     posts.forEach(function (post) {
         savePost(post);
     });
@@ -97,3 +98,5 @@ var areas = [];
 images.forEach(function (image) {
     areas.push(image.height * image.width);
 });
+console.log('Areas: ');
+console.log(areas);

@@ -58,6 +58,7 @@ function commentsForPost(post, comments) {
     })
 }
 
+console.log('commentsForPost: ');
 console.log(commentsForPost(post, comments));
 
 /**
@@ -75,6 +76,8 @@ var filteredNumbers;
 filteredNumbers = numbers.filter(function (num) {
     return num > 50;
 });
+console.log('filteredNumbers: ');
+console.log(filteredNumbers);
 
 /**
  * 2. Handling Permissions with Filter
@@ -93,6 +96,8 @@ var filteredUsers;
 filteredUsers = users.filter(function (user) {
     return user.admin;
 });
+console.log('filteredUsers: ');
+console.log(filteredNumbers);
 
 /**
  * 3. Implementing 'reject'.
@@ -110,5 +115,6 @@ function reject(array, iteratorFunction) {
 var lessThanFifteen = reject(numbers, function (number) {
     return number > 15;
 });
+console.log('lessThanFifteen: ');
 console.log(lessThanFifteen);
 
