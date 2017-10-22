@@ -39,7 +39,7 @@ console.log(doubledNumbers);
 const team = {
     members: ['Jane', 'Bill'],
     teamName: 'Super Squad',
-    teamSummary: function() {
+    teamSummary: function () {
         return this.members.map((member) => {
             return `${member} is on team ${this.teamName}`;
         });
@@ -56,7 +56,7 @@ console.log(team.teamSummary());
  * 
  * Refactor the code below to use a fat arrow function.
  */
-const fibonacci = function(n) {
+const fibonacci = function (n) {
     if (n < 3) return 1;
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
@@ -87,7 +87,7 @@ const profileArrow = {
 
 const profileFunc = {
     name: 'Alex',
-    getName: function() {
+    getName: function () {
         return this.name
     }
 };
