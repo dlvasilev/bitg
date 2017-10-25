@@ -1,3 +1,3 @@
 # Redux
 
-Project created with React and Redux
+Projects created with React and Redux
