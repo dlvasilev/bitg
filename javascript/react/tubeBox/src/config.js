@@ -1,5 +1,6 @@
+// Youtube API 3 Key
 const YOUTUBE_API_KEY = '';
 
-export default {
+export {
   YOUTUBE_API_KEY
 }
