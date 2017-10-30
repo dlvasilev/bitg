@@ -1,9 +1,25 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { createPost } from '../actions';
+
+const FIELDS = {
+  title: {
+    type: 'input',
+    label: 'Title for Post'
+  },
+  categories: { 
+    type: 'input',
+    label: 'Enter some categories for this post'
+  },
+  content: { 
+    type: 'textarea',
+    label: 'Post Contents'
+  }
+};
 
 class PostsNew extends Component {
   renderField(field) {
@@ -14,7 +30,7 @@ class PostsNew extends Component {
     return (
       <div className={className}>
         <label>{field.label}</label>
-        <input className="form-control" type="text" {...field.input} />
+        <field.type className="form-control" type="text" {...field.input} />
         <div className="text-help">
           {touched ? error : ''}
         </div>
@@ -33,9 +49,10 @@ class PostsNew extends Component {
 
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-        <Field label="Title" name="title" component={this.renderField} />
-        <Field label="Categories" name="categories"component={this.renderField} />
-        <Field label="Post Content" name="content" component={this.renderField} />
+        <h3>Create a New Post</h3>
+        {_.map(FIELDS, (field, fieldName) => {
+          return <Field name={fieldName} component={this.renderField} { ...field } key={fieldName} />
+        })}
         <button type="submit" className="btn btn-primary">Submit</button>
         <Link to="/" className="btn btn-danger">Cancel</Link>
       </form>
@@ -46,15 +63,11 @@ class PostsNew extends Component {
 function validate(values) {
   const errors = {};
 
-  if(!values.title) {
-    errors.title = "Enter a title!";
-  }
-  if(!values.categories) {
-    errors.categories = "Enter some categories!";
-  }
-  if(!values.content) {
-    errors.content = "Enter some content please!";
-  }
+  _.each(FIELDS, (type, field) => {
+    if(!values[field]) {
+      errors[field] = `Enter ${field}`;
+    }
+  });
 
   return errors;
 }
