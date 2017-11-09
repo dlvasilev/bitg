@@ -1,2 +1,2 @@
 # Tester
-React Testing App
+React Testing App with Mocha and Chai 
