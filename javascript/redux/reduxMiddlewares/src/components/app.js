@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
+import UserList from './user_list';
+
 export default class App extends Component {
   render() {
     return (
-      <div>React middlewares</div>
+      <div>
+        <h1>React Middlewares</h1>
+        <UserList />
+      </div>
     );
   }
 }
