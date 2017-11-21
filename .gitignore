@@ -4,3 +4,5 @@ npm-debug.log
 # IntelliJ
 *.iml
 /.idea
+
+javascript/apps/auther/server/config\.js
