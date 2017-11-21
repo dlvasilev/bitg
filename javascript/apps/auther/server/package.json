@@ -1,7 +1,7 @@
 {
   "name": "auther-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Auther Server",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
