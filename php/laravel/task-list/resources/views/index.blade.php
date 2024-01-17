@@ -9,7 +9,7 @@
         <div>There are tasks</div>
         <div>Here is the list</div>
         @foreach($tasks as $task)
-            <div><a href="{{ route('tasks.show', ['id' => $task->id]) }}">{{$task->title}}</a></div>
+            <div><a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{$task->title}}</a></div>
         @endforeach
     @else
         <div>There are no tasks</div>
